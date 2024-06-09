@@ -16,10 +16,8 @@ const SignUp: React.FC = () => {
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
-
       // Set the display name for the user
       await updateProfile(user, { displayName });
-
       console.log('User registered and profile updated:', user);
       navigate('/login');
     } catch (error: any) {
@@ -35,36 +33,18 @@ const SignUp: React.FC = () => {
           <form onSubmit={handleSubmit}>
             <div className="mb-3">
               <label htmlFor="displayName" className="mb-1">Display Name</label>
-              <input
-                type="text"
-                className="form-control"
-                id="displayName"
-                value={displayName}
-                onChange={(e) => setDisplayName(e.target.value)}
-                required
-              />
+              <input type="text" className="form-control" id="displayName" value={displayName}
+              onChange={(e) => setDisplayName(e.target.value)} required/>
             </div>
             <div className="mb-3">
               <label htmlFor="email" className="mb-1">Email</label>
-              <input
-                type="email"
-                className="form-control"
-                id="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
+              <input type="email" className="form-control" id="email" value={email}
+              onChange={(e) => setEmail(e.target.value)} required />
             </div>
             <div className="mb-3">
               <label htmlFor="password" className="mb-1">Password</label>
-              <input
-                type="password"
-                className="form-control"
-                id="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
-              />
+              <input type="password" className="form-control" id="password" value={password}
+              onChange={(e) => setPassword(e.target.value)} required />
             </div>
             {error && <p className="text-danger">{error}</p>}
             <button type="submit" className="btn btn-primary">Sign Up</button>

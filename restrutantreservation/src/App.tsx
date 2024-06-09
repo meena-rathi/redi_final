@@ -2,14 +2,13 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch, Routes } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './views//Home';
-import Menu from './views/Menu'; // Example additional page
+import Menu from './views/Menu';
 import { useState } from 'react';
 import ReservationForm from './views/ReservationForm';
 import ViewReservation from './views/ViewReservation';
 import EditReservationForm from './components/EditReservationForm';
 import Signup from './views/Signup';
 import Login from './views/Login';
-
 import NavBar from './components/NavBar';
 
 

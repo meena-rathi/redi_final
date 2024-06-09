@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Footer from './Footer';
 import NavBar from './NavBar';
 
-interface LayoutProps {
+type LayoutProps = {
   children: React.ReactNode;
 }
 

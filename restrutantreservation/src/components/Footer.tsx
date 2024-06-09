@@ -13,33 +13,21 @@ const Footer: React.FC = () => {
                 <h5 className="header-footer-bg">Follow Us</h5>
                 <ul className="list-unstyled d-flex justify-content-evenly">
                   <li>
-                    <a className="text-white"
-                      href="https://facebook.com"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                      aria-label="Go to our Facebook, opens in a new tab"
-                    >
-                      <i className="bi bi-facebook"></i>
+                    <a className="text-white" href="https://facebook.com" rel="noopener noreferrer"
+                    target="_blank" aria-label="Go to our Facebook, opens in a new tab">
+                    <i className="bi bi-facebook"></i>
                     </a>
                   </li>
                   <li>
-                    <a className="text-white"
-                      href="https://twitter.com"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                      aria-label="Go to our Twitter, opens in a new tab"
-                    >
-                      <i className="bi bi-twitter-x"></i>
+                    <a className="text-white" href="https://twitter.com" rel="noopener noreferrer" target="_blank"
+                    aria-label="Go to our Twitter, opens in a new tab">
+                    <i className="bi bi-twitter-x"></i>
                     </a>
                   </li>
                   <li>
-                    <a className="text-white"
-                      href="https://instagram.com"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                      aria-label="Go to our Instagram, opens in a new tab"
-                    >
-                      <i className="bi bi-instagram"></i>
+                    <a className="text-white" href="https://instagram.com" rel="noopener noreferrer"
+                    target="_blank" aria-label="Go to our Instagram, opens in a new tab">
+                    <i className="bi bi-instagram"></i>
                     </a>
                   </li>
                 </ul>

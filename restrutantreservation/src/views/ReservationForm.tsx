@@ -41,17 +41,17 @@ const ReservationForm: React.FC = () => {
   }, []);
 
   return (
-    <div className="container mt-4 py-5 text-brown">
-      <div className="row justify-content-center">
-        <h1 className="text-center mt-auto py-1 text-brown">Reservation</h1>
-        <div className="col-lg-6">
-          <Formik<FormData>
-            initialValues={{
-              name: userName, // Prefill the name field with the user's display name
-              email: "",
-              numberOfPeople: 0,
-              phoneNumber: "",
-              date: new Date().toISOString().split("T")[0],
+  <div className="container mt-4 py-5 text-brown">
+    <div className="row justify-content-center">
+      <h1 className="text-center mt-auto py-1 text-brown">Reservation</h1>
+      <div className="col-lg-6">
+        <Formik<FormData>
+          initialValues={{
+            name: userName, // Prefill the name field with the user's display name
+            email: "",
+            numberOfPeople: 0,
+            phoneNumber: "",
+            date: new Date().toISOString().split("T")[0],
             }}
             enableReinitialize={true}
             validationSchema={registrationSegma}
@@ -72,93 +72,36 @@ const ReservationForm: React.FC = () => {
             <Form>
               <div className="mb-3 d-flex flex-column flex-lg-row justify-content-between">
                 <div className="flex-fill me-lg-3 mb-lg-0 mb-3">
-                  <label htmlFor="name" className="mb-1">
-                    Name:
-                  </label>
-                  <Field
-                    type="text"
-                    name="name"
-                    className="form-control"
-                    placeholder="Name"
-                  />
-                  <ErrorMessage
-                    name="name"
-                    component="div"
-                    className="error"
-                  />
+                  <label htmlFor="name" className="mb-1">Name:</label>
+                  <Field type="text" name="name" className="form-control" placeholder="Name"/>
+                  <ErrorMessage name="name" component="div" className="error"/>
                 </div>
                 <div className="flex-fill">
-                  <label htmlFor="email" className="mb-1">
-                    Email:
-                  </label>
-                  <Field
-                    type="email"
-                    name="email"
-                    className="form-control"
-                    placeholder="Email"
-                  />
-                  <ErrorMessage
-                    name="email"
-                    component="div"
-                    className="error"
-                  />
+                  <label htmlFor="email" className="mb-1">Email:</label>
+                  <Field type="email" name="email" className="form-control" placeholder="Email"/>
+                  <ErrorMessage name="email" component="div" className="error"/>
                 </div>
               </div>
               <div className="mb-3 d-flex flex-column flex-lg-row justify-content-between">
                 <div className="flex-fill me-lg-3 mb-lg-0 mb-3">
-                  <label htmlFor="numberOfPeople" className="mb-1">
-                    Number of People:
-                  </label>
-                  <Field
-                    type="number"
-                    name="numberOfPeople"
-                    className="form-control"
-                    placeholder="Number of People"
-                  />
-                  <ErrorMessage
-                    name="numberOfPeople"
-                    component="div"
-                    className="error"
-                  />
+                  <label htmlFor="numberOfPeople" className="mb-1">Number of People:</label>
+                  <Field type="number" name="numberOfPeople" className="form-control" placeholder="Number of People"/>
+                  <ErrorMessage name="numberOfPeople" component="div" className="error"/>
                 </div>
                 <div className="flex-fill">
-                  <label htmlFor="phoneNumber" className="mb-1">
-                    Phone Number:
-                  </label>
-                  <Field
-                    type="text"
-                    name="phoneNumber"
-                    className="form-control"
-                    placeholder="Phone Number"
-                  />
-                  <ErrorMessage
-                    name="phoneNumber"
-                    component="div"
-                    className="error"
-                  />
+                  <label htmlFor="phoneNumber" className="mb-1">Phone Number:</label>
+                  <Field type="text" name="phoneNumber" className="form-control" placeholder="Phone Number"/>
+                  <ErrorMessage name="phoneNumber" component="div" className="error"/>
                 </div>
               </div>
               <div className="mb-3 d-flex flex-column flex-lg-row justify-content-between">
                 <div className="flex-fill me-lg-3 mb-lg-0 mb-3">
-                  <label htmlFor="date" className="mb-1">
-                    Date:
-                  </label>
-                  <Field
-                    type="date"
-                    name="date"
-                    className="form-control"
-                    placeholder="Date"
-                  />
-                  <ErrorMessage
-                    name="date"
-                    component="div"
-                    className="error"
-                  />
+                  <label htmlFor="date" className="mb-1">Date:</label>
+                  <Field type="date" name="date" className="form-control" placeholder="Date"/>
+                  <ErrorMessage name="date" component="div" className="error"/>
                 </div>
               </div>
-              <button type="submit" className="btn btn-primary">
-                Submit
-              </button>
+              <button type="submit" className="btn btn-primary">Submit</button>
             </Form>
           </Formik>
         </div>

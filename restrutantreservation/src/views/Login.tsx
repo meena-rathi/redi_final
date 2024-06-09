@@ -3,7 +3,7 @@ import { signInWithEmailAndPassword, UserCredential } from 'firebase/auth';
 import { auth } from '../firebase';
 import { useNavigate, Link } from 'react-router-dom';
 
-interface LoginProps {
+type LoginProps = {
   onLogin: () => void;
   setUserName: (name: string) => void;
 }
@@ -16,20 +16,17 @@ const Login: React.FC<LoginProps> = ({ onLogin, setUserName }) => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
     try {
       const userCredential: UserCredential = await signInWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
-      console.log('User:', user); // Log the user object to inspect its properties
-
+      console.log('User:', user); 
       if (user.displayName) {
         const userName: string = user.displayName;
         setUserName(userName);
-        console.log('Username:', userName); // Log the username
+        console.log('Username:', userName); 
       } else {
         console.log('Display name not set for this user.');
       }
-
       onLogin();
       navigate("/ReservationForm");
       console.log('User logged in:', user);
@@ -37,7 +34,6 @@ const Login: React.FC<LoginProps> = ({ onLogin, setUserName }) => {
       setError(error.message);
     }
   };
-
   return (
     <div className="container mt-4 py-5 text-brown">
       <div className="row justify-content-center">

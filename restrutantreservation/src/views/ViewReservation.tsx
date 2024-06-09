@@ -82,7 +82,6 @@ const ViewReservation: React.FC = () => {
     </div>
     </div>
     </div>
-    
   );
 };
 
