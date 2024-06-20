@@ -7,14 +7,6 @@ export interface MenuItem {
     description: string;
 }
 
-// export const menuData: MenuItem[] =  [
-//     {"image": lunch1, "description": "Pasta with vegetables and spicy sauces 10"},
-//     {"image": dinner1, "description": "Pasta with vegetables and spicy sauces 10"},
-//     {"image": lunch1, "description": "Pasta with vegetables and spicy sauces 10"},
-//     {"image": dinner1, "description": "Pasta with vegetables and spicy sauces 10"},
-    
-// ]
-
 export const menuDataLunch: MenuItem[] =  [
     {"image": lunch1, "description": "Pasta with vegetables and spicy sauces 10"},
     {"image": dinner1, "description": "Pasta with vegetables and spicy sauces 10"},

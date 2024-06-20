@@ -11,7 +11,6 @@ import Signup from './views/Signup';
 import Login from './views/Login';
 import NavBar from './components/NavBar';
 
-
 const App: React.FC = () => {
   return (
     <Router>

@@ -19,7 +19,7 @@ const SignUp: React.FC = () => {
       // Set the display name for the user
       await updateProfile(user, { displayName });
       console.log('User registered and profile updated:', user);
-      navigate('/login');
+      navigate('/reservationform');
     } catch (error: any) {
       setError(error.message);
     }
